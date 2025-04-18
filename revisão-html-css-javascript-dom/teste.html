@@ -9,13 +9,12 @@
         body {
             margin: 0;
             padding: 00;
-            background-color: #000000;
+            background-color: #f7b05b;
             color: #ffffff;
         }
 
         h2 {
             font-size: 32px;
-            color: red;
             padding: 20px;
             margin: 40px;
             border: white;
@@ -25,11 +24,13 @@
 
         section {
             border: green;
-            background-color: green;
+            background-color: #ffc15e;
+            margin-top: 50vh;
         }
 
         .red {
-            color: red;
+            color: #1f1300;
+            
         }
 
         #email {
@@ -43,12 +44,13 @@
         .itens{
             width: 80px;
             height: 80px;
-            background-color: violet;
+            background-color: #cc5803;
             display: flex;
             align-items: center;
             flex-direction: center;
             justify-content: center;
             margin: 10px;
+            border-radius: 10px;
             
             /* border-radius: 10px;
             border: solid 2px black; */
@@ -60,6 +62,10 @@
         .itens:first-child:hover , .itens:last-child:hover{
             background-color: blue;
         }
+        .inputs{
+            width: 200px;
+            border-radius: 5px;
+        }
         
         .inputs:focus{
             background-color: grey;
@@ -69,13 +75,20 @@
         }
         .flex{
             display: flex;
-            background-color: green;
+            background-color: #ffc15e;
             width: 100%;
             /* flex-direction: column; */
             /* height: 40vh; */
             /* flex-direction: row;
             align-items: center;
             justify-content:space-evenly; */
+        }
+        h1,h2,h3 {
+            color: #1f1300;
+        }
+        .nomeUsuario{
+            display: flex;
+            flex-direction: column;
         }
         
         @media(max-width: 400px){
@@ -95,8 +108,8 @@
         <h1>H1</h1>
     </header>
 
-    <h3>FlexBox</h3>
-    <div class="flex">
+    <h3 id="lista">FlexBox</h3>
+    <div class="flex" >
         <div class="itens">A</div>
         <div class="itens">B</div>
         <div class="itens">C</div>
@@ -104,11 +117,16 @@
         <div class="itens">B</div>
         <div class="itens">C</div>
     </div>
-    <div >
-        <input class="inputs" type="pseudo-class">
+    <div class="nomeUsuario" >
+        <label for="nome" class="red">Nome: </label>
+        <input class="inputs" name="email" type="pseudo-class">
+        <button onclick="window.document.getElementById('lista').remove()">Limpar título</button>
     </div>
 
-    <label for="nome" class="red">Nome: </label>
+
+
+
+
     <section>
         <h2>H2</h2>
         <ol>
