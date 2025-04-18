@@ -18,7 +18,14 @@
             color: red;
             padding: 20px;
             margin: 40px;
-            border: 10px;
+            border: white;
+            border-color: white;
+            /* background-color: red; */
+        }
+
+        section {
+            border: green;
+            background-color: green;
         }
 
         .red {
@@ -26,10 +33,57 @@
         }
 
         #email {
-            color: white ;
+            color: white;
             border: 0;
             background-color: green;
             width: 100%;
+        }
+        
+        
+        .itens{
+            width: 80px;
+            height: 80px;
+            background-color: violet;
+            display: flex;
+            align-items: center;
+            flex-direction: center;
+            justify-content: center;
+            margin: 10px;
+            
+            /* border-radius: 10px;
+            border: solid 2px black; */
+        }
+        .itens:hover{
+            background-color: red;
+            cursor: progress;
+        }
+        .itens:first-child:hover , .itens:last-child:hover{
+            background-color: blue;
+        }
+        
+        .inputs:focus{
+            background-color: grey;
+            color: red;
+            border-color: red;        
+            
+        }
+        .flex{
+            display: flex;
+            background-color: green;
+            width: 100%;
+            /* flex-direction: column; */
+            /* height: 40vh; */
+            /* flex-direction: row;
+            align-items: center;
+            justify-content:space-evenly; */
+        }
+        
+        @media(max-width: 400px){
+            .flex{
+                background-color: blue;
+                flex-direction: column;
+
+            }
         }
     </style>
 </head>
@@ -40,6 +94,20 @@
     <header>
         <h1>H1</h1>
     </header>
+
+    <h3>FlexBox</h3>
+    <div class="flex">
+        <div class="itens">A</div>
+        <div class="itens">B</div>
+        <div class="itens">C</div>
+        <div class="itens">A</div>
+        <div class="itens">B</div>
+        <div class="itens">C</div>
+    </div>
+    <div >
+        <input class="inputs" type="pseudo-class">
+    </div>
+
     <label for="nome" class="red">Nome: </label>
     <section>
         <h2>H2</h2>
@@ -65,6 +133,7 @@
         <label for="cpf" class="red">cpf: </label>
         <br>
         <input type="cpf">
+        
         <br>
         <label for="email">Email</label>
         <br>
